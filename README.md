@@ -1,0 +1,2 @@
+VIMRC and BASHRC settings
+=========================
