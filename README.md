@@ -1,2 +1,2 @@
-VIMRC and BASHRC settings
+vimrc and bashrc settings
 =========================
