@@ -56,6 +56,7 @@ map <Leader><Space> :TMiniBufExplorer<CR>
 map <Leader>d :bd<CR>
 map <Leader>c A;<esc>O
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>qq :q!<cr>
 function SwitchBuffer()
     b#
 endfunction
@@ -68,5 +69,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:html_exclude_tags = ['html', 'style', 'body']
 let g:miniBufExplSplitBelow = 0
+
+let delimitMate_expand_cr = 1
 
 filetype plugin indent on     " required!

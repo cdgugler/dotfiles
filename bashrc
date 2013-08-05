@@ -100,3 +100,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# WP-CLI directory
+PATH=~/.wp-cli/bin:$PATH
