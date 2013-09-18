@@ -70,6 +70,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:html_exclude_tags = ['html', 'style', 'body']
 let g:miniBufExplSplitBelow = 0
 
+set backspace=2
 let delimitMate_expand_cr = 1
 
 filetype plugin indent on     " required!
