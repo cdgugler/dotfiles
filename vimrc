@@ -5,8 +5,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
 
+Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/SyntaxComplete'
@@ -19,6 +19,7 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
+Bundle 'kien/rainbow_parentheses.vim'
 
 set autoindent
 set cindent
@@ -35,6 +36,8 @@ set ignorecase
 set smartcase
 set splitbelow
 set splitright
+set backupdir=~/.backups,/tmp
+set directory=~/.backups,/tmp
 syntax enable
 color golden
 hi Normal ctermbg=None
