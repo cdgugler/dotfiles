@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'joonty/vdebug.git'
 
 set autoindent
 set cindent
@@ -55,7 +56,7 @@ cmap w!! %!sudo tee > /dev/null %
 map <Leader>\ :bn<cr>
 map <Leader>\| :bp<cr>
 map <Leader>e :e.<cr>
-map <Leader><Space> :TMiniBufExplorer<CR>
+map <Leader><Space> :MBEToggle<CR>
 map <Leader>d :bd<CR>
 map <Leader>c A;<esc>O
 map <Leader>n :NERDTreeToggle<CR>
