@@ -76,4 +76,18 @@ let g:miniBufExplSplitBelow = 0
 set backspace=2
 let delimitMate_expand_cr = 1
 
+" for writing
+func! WordProcessorMode()
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    map j gj
+    map k gk
+    setlocal spell spelllang=en_us
+    set complete+=s
+    set formatprg=par
+    setlocal wrap
+    setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
+
 filetype plugin indent on     " required!
