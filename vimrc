@@ -14,13 +14,14 @@ Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Raimondi/delimitMate'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
+Bundle 'vim-scripts/CSApprox'
 
 set autoindent
 set cindent
@@ -40,7 +41,7 @@ set splitright
 set backupdir=~/.backups,/tmp
 set directory=~/.backups,/tmp
 syntax enable
-color golden
+color adrian
 hi Normal ctermbg=None
 
 let mapleader="\\"
@@ -76,6 +77,7 @@ let g:miniBufExplSplitBelow = 0
 
 set backspace=2
 let delimitMate_expand_cr = 1
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 " for writing
 func! WordProcessorMode()
