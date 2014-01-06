@@ -22,6 +22,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'vim-scripts/CSApprox'
 
 set autoindent
 set cindent
@@ -41,7 +42,7 @@ set splitright
 set backupdir=~/.backups,/tmp
 set directory=~/.backups,/tmp
 syntax enable
-color golden
+color adrian
 hi Normal ctermbg=None
 
 let mapleader="\\"
@@ -77,5 +78,20 @@ let g:miniBufExplSplitBelow = 0
 
 set backspace=2
 let delimitMate_expand_cr = 1
+let delimitMate_matchpairs = "(:),[:],{:}"
+
+" for writing
+func! WordProcessorMode()
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    map j gj
+    map k gk
+    setlocal spell spelllang=en_us
+    set complete+=s
+    set formatprg=par
+    setlocal wrap
+    setlocal linebreak
+endfu
+com! WP call WordProcessorMode()
 
 filetype plugin indent on     " required!
