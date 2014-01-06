@@ -14,13 +14,14 @@ Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Raimondi/delimitMate'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
+Bundle 'marijnh/tern_for_vim'
 
 set autoindent
 set cindent
