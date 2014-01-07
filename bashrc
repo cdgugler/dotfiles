@@ -103,3 +103,5 @@ fi
 
 # WP-CLI directory
 PATH=~/.wp-cli/bin:$PATH
+
+export TERM=xterm-256color
