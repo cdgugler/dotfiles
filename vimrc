@@ -23,6 +23,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/CSApprox'
+Bundle 'Yggdroot/indentLine'
 
 set autoindent
 set cindent
