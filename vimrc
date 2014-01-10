@@ -95,4 +95,29 @@ func! WordProcessorMode()
 endfu
 com! WP call WordProcessorMode()
 
+" to remove background after CSApprox runs
+func! FixBackground()
+    hi Normal ctermbg=NONE
+    hi Comment ctermbg=NONE
+    hi Constant ctermbg=NONE
+    hi Special ctermbg=NONE
+    hi Identifier ctermbg=NONE
+    hi Statement ctermbg=NONE
+    hi PreProc ctermbg=NONE
+    hi Type ctermbg=NONE
+    hi Underlined ctermbg=NONE
+    hi Todo ctermbg=NONE
+    hi String ctermbg=NONE
+    hi Function ctermbg=NONE
+    hi Conditional ctermbg=NONE
+    hi Repeat ctermbg=NONE
+    hi Operator ctermbg=NONE
+    hi Structure ctermbg=NONE
+    hi NonText ctermbg=NONE
+    hi Delimiter ctermbg=NONE
+endfu
+com! FixBG call FixBackground()
+" run FixBG after vim has done all the startup stuff
+autocmd VimEnter * FixBG
+
 filetype plugin indent on     " required!
