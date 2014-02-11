@@ -15,7 +15,6 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mattn/emmet-vim'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
@@ -24,10 +23,13 @@ Bundle 'joonty/vdebug.git'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/CSApprox'
 Bundle 'Yggdroot/indentLine'
+Bundle 'xsbeats/vim-blade'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/bufkill.vim'
 
 set autoindent
 set cindent
-set t_Co=256
 set wildmenu
 set number
 set hidden
@@ -50,8 +52,6 @@ let mapleader="\\"
 " Remove YCM detailed diagnostics mapping
 let g:ycm_key_detailed_diagnostics = ''
 map <leader>t :tabnew<cr>
-"map <leader>cs <esc>I/**<esc>
-"map <leader>ce <esc>A**/<esc>
 map <leader>fh :set ft=html<cr>
 map <leader>fj :set ft=javascript<cr>
 map <leader>fp :set ft=php<cr>
@@ -60,7 +60,7 @@ map <Leader>\ :bn<cr>
 map <Leader>\| :bp<cr>
 map <Leader>e :e.<cr>
 map <Leader><Space> :MBEToggle<CR>
-map <Leader>d :bd<CR>
+map <Leader>d :BD<CR>
 map <Leader>c A;<esc>O
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>qq :q!<cr>
@@ -68,18 +68,22 @@ function SwitchBuffer()
     b#
 endfunction
 nmap <Tab> :call SwitchBuffer()<CR>
-" :nnoremap <Leader><Space> :buffers<CR>:buffer<Space>
 
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:html_exclude_tags = ['html', 'style', 'body']
-let g:miniBufExplSplitBelow = 0
+let g:airline#extensions#tabline#enabled = 1
 
 set backspace=2
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = "(:),[:],{:}"
+
+let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snippets']
+
+let g:indentLine_color_term = 15
 
 " for writing
 func! WordProcessorMode()
