@@ -1,0 +1,6 @@
+# Set editing mode in bash to use vi mode
+set -o vi
+
+# Remap Ctrl-L to clear screen in input mode
+set keymap vi-insert
+"\C-l": "\e\C-la"

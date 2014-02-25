@@ -105,6 +105,3 @@ fi
 PATH=~/.wp-cli/bin:$PATH
 
 export TERM=xterm-256color
-
-# Set editing mode in bash to use vi mode
-set -o vi
