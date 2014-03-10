@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
  " let Vundle manage Vundle
  " required! 
- 
+
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
@@ -28,6 +28,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'joonty/vim-phpunitqf.git'
+Bundle 'honza/vim-snippets'
 
 set autoindent
 set cindent
@@ -81,8 +82,8 @@ set backspace=2
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = "(:),[:],{:}"
 
-let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snippets']
+" let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
+" let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snippets']
 
 let g:indentLine_color_term = 15
 
