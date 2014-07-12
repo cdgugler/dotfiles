@@ -27,6 +27,7 @@ Bundle 'xsbeats/vim-blade'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/bufkill.vim'
+Bundle 'airblade/vim-gitgutter'
 
 set autoindent
 set cindent
@@ -119,6 +120,11 @@ func! FixBackground()
     hi Structure ctermbg=NONE
     hi NonText ctermbg=NONE
     hi Delimiter ctermbg=NONE
+    hi clear SignColumn
+    hi GitGutterAdd ctermbg=NONE
+    hi GitGutterChange ctermbg=NONE
+    hi GitGutterDelete ctermbg=NONE
+    hi GitGutterChangeDelete ctermbg=NONE
 endfu
 com! FixBG call FixBackground()
 " run FixBG after vim has done all the startup stuff
