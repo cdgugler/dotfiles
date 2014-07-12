@@ -1,15 +1,15 @@
 set nocompatible
 filetype off
-
+" 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" let Vundle manage Vundle
-" required! 
-
+ " let Vundle manage Vundle
+ " required! 
+ 
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
-Bundle 'vim-scripts/SyntaxComplete'
+" Bundle 'vim-scripts/SyntaxComplete'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
@@ -28,6 +28,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'joonty/vim-phpunitqf.git'
 
 set autoindent
 set cindent
@@ -48,7 +49,7 @@ set directory=~/.backups,/tmp
 syntax enable
 color adrian
 hi Normal ctermbg=None
-
+ 
 let mapleader="\\"
 " Remove YCM detailed diagnostics mapping
 let g:ycm_key_detailed_diagnostics = ''
@@ -131,3 +132,5 @@ com! FixBG call FixBackground()
 autocmd VimEnter * FixBG
 
 filetype plugin indent on     " required!
+let g:ycm_seed_identifiers_with_syntax = 0
+set omnifunc=syntaxcomplete#Complete
