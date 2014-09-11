@@ -9,14 +9,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
-" Bundle 'vim-scripts/SyntaxComplete'
+Bundle 'vim-scripts/SyntaxComplete'
 Bundle 'othree/html5.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Raimondi/delimitMate'
 Bundle 'mattn/emmet-vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
@@ -29,6 +28,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/bufkill.vim'
 Bundle 'joonty/vim-phpunitqf.git'
 Bundle 'honza/vim-snippets'
+Bundle 'vim-scripts/prefixer.vim'
 
 set autoindent
 set cindent
@@ -52,7 +52,8 @@ hi Normal ctermbg=None
  
 let mapleader="\\"
 " Remove YCM detailed diagnostics mapping
-let g:ycm_key_detailed_diagnostics = ''
+" let g:ycm_key_detailed_diagnostics = ''
+set pastetoggle=<leader>p
 map <leader>t :tabnew<cr>
 map <leader>fh :set ft=html<cr>
 map <leader>fj :set ft=javascript<cr>
@@ -66,6 +67,8 @@ map <Leader>d :BD<CR>
 map <Leader>c A;<esc>O
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>qq :q!<cr>
+map <Leader>y :w !pbcopy<CR><CR>
+
 function SwitchBuffer()
     b#
 endfunction

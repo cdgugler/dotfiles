@@ -3,3 +3,4 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 alias vim='/Applications/MacVim.app/Contents/MacOS/vim'
 alias screen='/usr/local/bin/screen'
+alias serv='python -m SimpleHTTPServer 8080'
