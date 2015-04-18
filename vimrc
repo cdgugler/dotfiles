@@ -1,34 +1,37 @@
 set nocompatible
 filetype off
 " 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
  " let Vundle manage Vundle
  " required! 
  
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'SirVer/ultisnips'
-" Bundle 'vim-scripts/SyntaxComplete'
-Bundle 'othree/html5.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'Raimondi/delimitMate'
-Bundle 'mattn/emmet-vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'joonty/vdebug.git'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'vim-scripts/CSApprox'
-Bundle 'Yggdroot/indentLine'
-Bundle 'xsbeats/vim-blade'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/bufkill.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'joonty/vim-phpunitqf.git'
+Plugin 'gmarik/vundle'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'joonty/vdebug.git'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'vim-scripts/CSApprox'
+Plugin 'Yggdroot/indentLine'
+Plugin 'xsbeats/vim-blade'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/bufkill.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'joonty/vim-phpunitqf.git'
+Plugin 'Valloric/MatchTagAlways'
+
+call vundle#end()
+filetype plugin indent on
 
 set autoindent
 set cindent
@@ -82,10 +85,12 @@ set backspace=2
 let delimitMate_expand_cr = 1
 let delimitMate_matchpairs = "(:),[:],{:}"
 
-let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snippets']
+" let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
+" let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'snippets']
 
 let g:indentLine_color_term = 15
+
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
 
 " for writing
 func! WordProcessorMode()
@@ -131,6 +136,5 @@ com! FixBG call FixBackground()
 " run FixBG after vim has done all the startup stuff
 autocmd VimEnter * FixBG
 
-filetype plugin indent on     " required!
 let g:ycm_seed_identifiers_with_syntax = 0
 set omnifunc=syntaxcomplete#Complete
