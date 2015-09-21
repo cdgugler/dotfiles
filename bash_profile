@@ -1,7 +1,3 @@
-# WP-CLI Bash completions
-source $HOME/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash
-export PATH=/home/cory/.wp-cli/bin:$PATH
-
 if [ -f ~/.drush_bashrc ] ; then
     . ~/.drush_bashrc
 fi
@@ -14,4 +10,10 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source ~/.profile
+. ~/.profile
+
+export PATH="$PATH:/Applications/DevDesktop/drush"
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi

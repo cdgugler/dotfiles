@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 " 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle
 call vundle#rc()
  " let Vundle manage Vundle
  " required! 
@@ -21,7 +21,6 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'joonty/vdebug.git'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/CSApprox'
-Bundle 'Yggdroot/indentLine'
 Bundle 'xsbeats/vim-blade'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
@@ -29,6 +28,11 @@ Bundle 'vim-scripts/bufkill.vim'
 Bundle 'joonty/vim-phpunitqf.git'
 Bundle 'honza/vim-snippets'
 Bundle 'vim-scripts/prefixer.vim'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'Shutnik/jshint2.vim'
+Bundle 'rking/ag.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mxw/vim-jsx.git'
 
 set autoindent
 set cindent
@@ -36,9 +40,9 @@ set wildmenu
 set number
 set hidden
 set ic nowrap
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set ignorecase
 set smartcase
@@ -68,6 +72,10 @@ map <Leader>c A;<esc>O
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>qq :q!<cr>
 map <Leader>y :w !pbcopy<CR><CR>
+map <Leader>ca :!caniuse <C-r><C-w><CR>
+map <Leader>j :%!python -m json.tool<CR>
+map <C-\> :bn<cr>
+map <BS> :bp<cr>
 
 function SwitchBuffer()
     b#
@@ -132,3 +140,25 @@ autocmd VimEnter * FixBG
 filetype plugin indent on     " required!
 let g:ycm_seed_identifiers_with_syntax = 0
 set omnifunc=syntaxcomplete#Complete
+
+let g:ctrlp_working_path_mode = 'ra'
+
+" The Silver Searcher
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    set grepprg=ag\ --nogroup\ --nocolor
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap K :silent grep! "\b<C-R><C-W>\b"<CR>:cw<CR>:redr!<CR>
+    nnoremap ff :Ag<SPACE>
+    vnoremap ff y:Ag<SPACE><C-R>"
+endif
+
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_extensions = ['tag', 'buffertag', 'line', 'mixed']
+
+set iskeyword+=-
+
+augroup ProjectSetup
+  au BufRead,BufEnter /Users/corygugler/www/jpm/* set tabstop=4 shiftwidth=4 softtabstop=4
+augroup END

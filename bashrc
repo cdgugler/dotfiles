@@ -105,3 +105,5 @@ fi
 PATH=~/.wp-cli/bin:$PATH
 
 export TERM=xterm-256color
+
+export PATH="$PATH:/Applications/DevDesktop/drush"
